@@ -6,7 +6,8 @@ public class Menu {
 
 	public static void main(String[] args) {
 
-		float valor, mls;
+		float valor;
+		int quantidade;
 		String nome_bebida, caracteristica;
 		int opcao = 0;
 		
@@ -33,8 +34,8 @@ public class Menu {
 		case 1:
 			System.out.println("Digite o nome do vinho: ");
 			nome_bebida = leia.next();
-			System.out.println("informe o tanto de mls: ");
-			mls = leia.nextFloat();
+			System.out.println("informe a quantidade: ");
+			quantidade = leia.nextInt();
 			System.out.println("Digite o valor: ");
 			valor = leia.nextFloat();
 			System.out.println("Digite a caracteristica (seco/suave/doce): ");
