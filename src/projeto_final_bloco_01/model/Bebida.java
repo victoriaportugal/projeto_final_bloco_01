@@ -1,21 +1,19 @@
 package projeto_final_bloco_01.model;
 
 public abstract class Bebida {
-
+	
+	private int id;
 	private float valor;
 	private int quantidade;
 	private String nome_bebida;
-	private String caracteristica;
-	private int id;
-	
-	
-	public Bebida(float valor, int quantidade, String nome_bebida, String caracteristica, int id) {
-		super();
+	private String sabor_massa;
+
+	public Bebida(int id, float valor, int quantidade, String nome_bebida, String sabor_massa) {
+		this.id = id;
 		this.valor = valor;
 		this.quantidade = quantidade;
 		this.nome_bebida = nome_bebida;
-		this.caracteristica = caracteristica;
-		this.id = id;
+		this.sabor_massa = sabor_massa;
 	}
 
 	public int getId() {
@@ -25,7 +23,6 @@ public abstract class Bebida {
 	public void setId(int id) {
 		this.id = id;
 	}
-
 
 	public float getValor() {
 		return valor;
@@ -52,21 +49,22 @@ public abstract class Bebida {
 	}
 
 	public String getCaracteristica() {
-		return caracteristica;
+		return sabor_massa;
 	}
 
 	public void setCaracteristica(String caracteristica) {
-		this.caracteristica = caracteristica;
+		this.sabor_massa = caracteristica;
 	}
-	
+
 	public void visualizar() {
-		System.out.println("\n\n***********************************************************");
-		System.out.println("BEBIDA CADASTRADA:");
-		System.out.println("***********************************************************");
+		System.out.println("\n**");
+		System.out.println("Dados da bebida:");
+		System.out.println("**");
 		System.out.println("Valor: " + this.valor);
-		System.out.println("Caracteristica: " + this.caracteristica);
-		System.out.println("Nome da bebida: " + nome_bebida);
-		System.out.println("Quantidade: " + this.quantidade);
-		
+		System.out.println("Quantidade: " + quantidade);
+		System.out.println("Nome da bebida: " + this.nome_bebida);
+		System.out.println("Sabor da massa: " + this.sabor_massa);
+
 	}
+
 }
